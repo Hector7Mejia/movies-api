@@ -1,4 +1,4 @@
-package data;
+package data.movies;
 
 public class Movie {
    private String title;
@@ -25,6 +25,21 @@ public class Movie {
 
     public Movie() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "title='" + title + '\'' +
+                ", rating=" + rating +
+                ", poster='" + poster + '\'' +
+                ", year=" + year +
+                ", genre='" + genre + '\'' +
+                ", director='" + director + '\'' +
+                ", plot='" + plot + '\'' +
+                ", actors='" + actors + '\'' +
+                ", id=" + id +
+                '}';
     }
 
     //accessors
