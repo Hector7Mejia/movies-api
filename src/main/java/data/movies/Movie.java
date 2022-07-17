@@ -51,15 +51,15 @@ public class Movie {
         this.title = title;
     }
 
-    public int getRating() {
+    public Integer getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(Integer rating) {
         this.rating = rating;
     }
 
-    public String getPoster() {
+    public String  getPoster() {
         return poster;
     }
 
@@ -67,11 +67,11 @@ public class Movie {
         this.poster = poster;
     }
 
-    public int getYear() {
+    public Integer getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 

@@ -3,6 +3,7 @@ package main;
 import com.google.gson.Gson;
 import data.movies.InMemoryMoviesDao;
 import data.movies.Movie;
+import data.movies.MySqlMoviesDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +18,8 @@ import java.util.ArrayList;
 
 @WebServlet(name="MovieServlet", urlPatterns="/movies/*")
 public class MovieServlet extends HttpServlet {
-    private InMemoryMoviesDao dao = new InMemoryMoviesDao();
+//    private InMemoryMoviesDao dao = new InMemoryMoviesDao();
+    private MySqlMoviesDao dao = new MySqlMoviesDao();
 //fetches data
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -104,6 +106,11 @@ public class MovieServlet extends HttpServlet {
 //if(foundMovie != null) {
 //    movies.remove(foundMovie);
 //}
-
     }
+
+//    @Override
+//    public void destroy() {
+//        super.destroy();
+//        dao.cleanUp();
+//    }
 }
